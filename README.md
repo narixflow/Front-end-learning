@@ -1,18 +1,23 @@
 # README
 Front-end learning materials
 
-### HTML + CSS
+## HTML + CSS
 Repository: 
 [Jonas html-css-course](https://github.com/jonasschmedtmann/html-css-course)
 
-Project:
+#### Project:  
 MyOmnifood: all html and css code except responsive design and js intro part
 
 
 
-### Javascript 
+## Javascript 
 Repository: 
 [Jonas complete-javascript-course](https://github.com/jonasschmedtmann/complete-javascript-course)
 
-
+#### Project: 
+1. DOM  
+  - Guess My Number
+  - Modal Window
+  - Pig Game
+  
 
