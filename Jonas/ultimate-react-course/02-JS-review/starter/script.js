@@ -204,6 +204,7 @@ function getTotalReviewCount(book) {
 console.log(getTotalReviewCount(book));
 */
 
+/*
 // Array - map
 const books = getBooks();
 const x = [1, 2, 3, 4, 5].map((el) => el * 2);
@@ -229,3 +230,77 @@ const adventureBooks = books
   .filter((books) => books.genres.includes("adventure"))
   .map((book) => book.title);
 adventureBooks;
+
+// Array - reduced
+const pagesAllBooks = books.reduce((sum, book) => sum + book.pages, 0);
+pagesAllBooks;
+
+// Array - sort (mutation function, change the array)
+const arr = [3, 6, 3, 7, 1];
+const sorted = arr.sort((a, b) => a - b);
+sorted;
+arr;
+
+const newSorted = arr.slice().sort((a, b) => b - a);
+newSorted;
+arr;
+
+// const sortedByPages = books.slice().sort((a, b) => b.pages, a.pages);
+// sortedByPages;
+
+// Immutable array
+// Create a new array, don't change array
+// 1) Add book object to array
+const newBook = {
+  id: 6,
+  title: "Harry Potter and the Chamber of Secrets",
+  author: "J. K. Rowling",
+};
+const booksAfterAdd = [...books, newBook];
+booksAfterAdd;
+
+// 2) Delete book object from array - filter
+const booksAfterDelete = booksAfterAdd.filter((book) => book.id !== 3);
+booksAfterDelete;
+
+// 3) Update book object in the array - map (overwrite) + ... (update new attributes)
+const booksAfterUpdate = booksAfterDelete.map((book) =>
+  book.id === 1 ? { ...book, pages: 1 } : book
+);
+booksAfterUpdate;
+*/
+
+/*
+// Asynchronous JS: Promises
+fetch("https://jsonplaceholder.typicode.com/todos")
+  .then((res) => res.json())
+  .then((data) => console.log(data));
+
+console.log("liang");
+*/
+
+// Asynchronous JS: AsyncAwait
+async function getTodos() {
+  const res = await fetch("https://jsonplaceholder.typicode.com/todos");
+  const data = await res.json();
+  console.log(data);
+}
+
+getTodos();
+console.log("liang");
+
+/*
+// if want to store async return value, just recall the function doesn't work.
+// Must use then again
+
+async function getTodos() {
+  const res = await fetch("https://jsonplaceholder.typicode.com/todos");
+  const data = await res.json();
+  console.log(data);
+
+  return data;
+}
+
+const todos = getTodos();
+console.log(todos);
+*/
